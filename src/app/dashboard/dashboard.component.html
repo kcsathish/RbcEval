@@ -1,0 +1,14 @@
+<div class="jumbotron bg-transparent text-center">
+    <div class="card text-center" *ngIf="this.socialusers">
+        <h3 class="card-header"> Social Login</h3>
+        <div class="card-block"></div>
+        <img class="card-img-top img-responsive photo" src="{{this.socialusers.photoUrl}}">
+        <div class="card-block">
+            <h4 class="card-title">{{this.socialusers.name}}</h4>
+            <p class="card-text">{{this.socialusers.email}}</p>
+            <p class="card-text">Logged in with GOOGLE</p>
+        </div>
+        <div class="card-block"><button class="btn btn-danger" (click)="logout()">Sign out</button></div>
+        <div class="card-block"><button class="btn" (click)="refreshToken()">Refresh google token</button></div>
+    </div>
+</div>
